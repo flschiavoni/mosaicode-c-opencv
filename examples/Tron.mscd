@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosaicode>
+ <version value="0.0.1"/>
+ <zoom value="1.0"/>
+ <language value="c"/>
+ <blocks>
+  <block collapsed="False" id="1" type="mosaicode_lib_c_opencv.extensions.opencv.General.show">
+   <position x="700.0" y="70.0"/>
+   <property key="title" value="My Image"/>
+   <property key="window_type" value="WINDOW_AUTOSIZE"/>
+  </block>
+  <block collapsed="False" id="3" type="mosaicode_lib_c_opencv.extensions.opencv.Morphological Operations.erode">
+   <position x="320.0" y="180.0"/>
+   <property key="masksizex" value="7"/>
+   <property key="masksizey" value="7"/>
+  </block>
+  <block collapsed="False" id="5" type="mosaicode_lib_c_opencv.extensions.opencv.Filters and Color Conversion.brightness">
+   <position x="560.0" y="280.0"/>
+   <property key="brightness" value="50"/>
+  </block>
+  <block collapsed="False" id="7" type="mosaicode_lib_c_opencv.extensions.opencv.Arithmetic and Logical Operations.subtraction">
+   <position x="440.0" y="20.0"/>
+  </block>
+  <block collapsed="False" id="8" type="mosaicode_lib_c_opencv.extensions.opencv.Image Source.liveMode">
+   <position x="130.0" y="30.0"/>
+  </block>
+ </blocks>
+ <connections>
+  <connection from_block="3" from_out="1" to_block="5" to_in="0"/>
+  <connection from_block="5" from_out="2" to_block="7" to_in="1"/>
+  <connection from_block="7" from_out="2" to_block="1" to_in="0"/>
+  <connection from_block="8" from_out="0" to_block="7" to_in="0"/>
+  <connection from_block="8" from_out="0" to_block="3" to_in="0"/>
+ </connections>
+ <comments/>
+</mosaicode>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mosaicode>
+ <version value="0.0.1"/>
+ <zoom value="1.0"/>
+ <language value="c"/>
+ <blocks>
+  <block collapsed="False" id="1" type="mosaicode_lib_c_opencv.extensions.opencv.Image Source.liveMode">
+   <position x="50.0" y="130.0"/>
+  </block>
+  <block collapsed="False" id="2" type="mosaicode_lib_c_opencv.extensions.opencv.General.show">
+   <position x="350.0" y="20.0"/>
+   <property key="title" value="My Image"/>
+   <property key="window_type" value="WINDOW_AUTOSIZE"/>
+  </block>
+  <block collapsed="False" id="3" type="mosaicode_lib_c_opencv.extensions.opencv.Experimental.cropImage">
+   <position x="300.0" y="300.0"/>
+   <property key="x" value="1"/>
+   <property key="y" value="1"/>
+   <property key="width" value="200"/>
+   <property key="height" value="200"/>
+  </block>
+  <block collapsed="False" id="4" type="mosaicode_lib_c_opencv.extensions.opencv.General.show">
+   <position x="540.0" y="310.0"/>
+   <property key="title" value=""/>
+   <property key="window_type" value=""/>
+  </block>
+  <block collapsed="False" id="5" type="mosaicode_lib_c_opencv.extensions.opencv.Experimental.cropImage">
+   <position x="350.0" y="160.0"/>
+   <property key="x" value="200"/>
+   <property key="y" value="1"/>
+   <property key="width" value="200"/>
+   <property key="height" value="200"/>
+  </block>
+  <block collapsed="False" id="6" type="mosaicode_lib_c_opencv.extensions.opencv.Experimental.cropImage">
+   <position x="370.0" y="100.0"/>
+   <property key="x" value="200"/>
+   <property key="y" value="200"/>
+   <property key="width" value="200"/>
+   <property key="height" value="200"/>
+  </block>
+  <block collapsed="False" id="8" type="mosaicode_lib_c_opencv.extensions.opencv.General.show">
+   <position x="530.0" y="230.0"/>
+   <property key="title" value="2"/>
+   <property key="window_type" value="WINDOW_AUTOSIZE"/>
+  </block>
+  <block collapsed="False" id="9" type="mosaicode_lib_c_opencv.extensions.opencv.General.show">
+   <position x="810.0" y="170.0"/>
+   <property key="title" value="My Image 3"/>
+   <property key="window_type" value="WINDOW_AUTOSIZE"/>
+  </block>
+  <block collapsed="False" id="11" type="mosaicode_lib_c_opencv.extensions.opencv.Arithmetic and Logical Operations.and">
+   <position x="570.0" y="80.0"/>
+  </block>
+  <block collapsed="False" id="12" type="mosaicode_lib_c_opencv.extensions.opencv.Experimental.invertImage">
+   <position x="590.0" y="170.0"/>
+  </block>
+  <block collapsed="False" id="13" type="mosaicode_lib_c_opencv.extensions.opencv.Filters and Color Conversion.colorConversion">
+   <position x="770.0" y="70.0"/>
+   <property key="conversion_type" value="COLOR_RGB2GRAY"/>
+  </block>
+ </blocks>
+ <connections>
+  <connection from_block="1" from_out="0" to_block="2" to_in="0"/>
+  <connection from_block="1" from_out="0" to_block="3" to_in="0"/>
+  <connection from_block="3" from_out="2" to_block="4" to_in="0"/>
+  <connection from_block="1" from_out="0" to_block="5" to_in="0"/>
+  <connection from_block="5" from_out="2" to_block="8" to_in="0"/>
+  <connection from_block="1" from_out="0" to_block="6" to_in="0"/>
+  <connection from_block="6" from_out="2" to_block="12" to_in="0"/>
+  <connection from_block="6" from_out="2" to_block="11" to_in="0"/>
+  <connection from_block="12" from_out="1" to_block="11" to_in="1"/>
+  <connection from_block="11" from_out="2" to_block="13" to_in="0"/>
+  <connection from_block="13" from_out="1" to_block="9" to_in="0"/>
+ </connections>
+ <comments/>
+</mosaicode>
